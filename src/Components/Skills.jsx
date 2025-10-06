@@ -4,7 +4,7 @@ import SKILLS from '../data/skills';
 function ProgressBar({ value = 0 }) {
   return (
     <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-      <div style={{ width: `${value}%` }} className="h-full rounded-full" />
+      <div style={{ width: `${value}%` }} className="h-full rounded-full bg-cyan-900 transition-all duration-300" />
     </div>
   );
 }
