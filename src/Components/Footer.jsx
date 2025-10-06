@@ -1,13 +1,48 @@
-import React from 'react';
+import { FaFacebookF } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="mt-12 border-t py-6">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <div>© {new Date().getFullYear()} YourName</div>
-        <div className="flex gap-4">
-          <a href="#">GitHub</a>
-          <a href="#">LinkedIn</a>
+    <footer className="mt-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-300 border-t border-gray-700">
+      <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Left Section */}
+        <div className="text-sm">
+          © {new Date().getFullYear()} <span className="font-semibold text-white">Subhash</span>. All rights reserved.
+        </div>
+
+        {/* Right Section - Social Links */}
+        <div className="flex gap-5">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors duration-300 flex items-center gap-1"
+          >
+            <FaGithub size={28} />
+            <span className="hidden sm:inline">GitHub</span>
+          </a>
+
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors duration-300 flex items-center gap-1"
+          >
+            <FaLinkedin size={28}/>
+            <span className="hidden sm:inline">LinkedIn</span>
+          </a>
+
+          <a
+            href="https://facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors duration-300 flex items-center gap-1"
+          >
+            
+            <FaFacebookF size={28}/>
+            <span className="hidden sm:inline">Facebook</span>
+          </a>
         </div>
       </div>
     </footer>
