@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import { ThemeProvider, useTheme} from '../context/ThemeContext';
+import { useTheme} from '../context/ThemeContext';
 import {motion} from 'framer-motion';
 export default function Navbar() {
       const [open, setOpen] = useState(false);
@@ -9,7 +9,7 @@ export default function Navbar() {
         <>
             <nav className="backdrop-blur-sm sticky top-0 z-40 bg-opacity-40" style={{ background: 'rgba(255,255,255,0.03)' }}>
                 <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-                    <Link to="/" className="font-semibold text-xl">Subhash</Link>
+                    <Link to="/" className="font-bold text-2xl">Subhash</Link>
                     <div className="hidden md:flex gap-6 items-center">
                         <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-accent' : ''}>Projects</NavLink>
                         <NavLink to="/about" className={({ isActive }) => isActive ? 'text-accent' : ''}>About</NavLink>
@@ -18,7 +18,7 @@ export default function Navbar() {
                             aria-label="Toggle theme"
                             className="p-2 rounded-lg border"
                         >
-                            {ThemeProvider === 'light' ? '🌞' : '🌙'}
+                            {theme === 'light' ? '🌞' : '🌙'}
                         </button>
                     </div>
 
