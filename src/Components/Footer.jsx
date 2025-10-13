@@ -19,8 +19,8 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-white transition-colors duration-300 flex items-center gap-1"
           >
-            <FaGithub size={28} />
-            <span className="hidden sm:inline">GitHub</span>
+            
+            <span className="hidden sm:inline"><FaGithub size={28} /></span>
           </a>
 
           <a
@@ -29,8 +29,8 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-white transition-colors duration-300 flex items-center gap-1"
           >
-            <FaLinkedin size={28}/>
-            <span className="hidden sm:inline">LinkedIn</span>
+            
+            <span className="hidden sm:inline"><FaLinkedin size={28}/></span>
           </a>
 
           <a
@@ -40,8 +40,8 @@ export default function Footer() {
             className="hover:text-white transition-colors duration-300 flex items-center gap-1"
           >
             
-            <FaFacebookF size={28}/>
-            <span className="hidden sm:inline">Facebook</span>
+          
+            <span className="hidden sm:inline"><FaFacebookF size={28}/></span>
           </a>
         </div>
       </div>
