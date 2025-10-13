@@ -11,8 +11,12 @@ export default function Navbar() {
                 <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
                     <Link to="/" className="font-bold text-2xl">Subhash</Link>
                     <div className="hidden md:flex gap-6 items-center">
-                        <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-accent' : ''}>Projects</NavLink>
-                        <NavLink to="/about" className={({ isActive }) => isActive ? 'text-accent' : ''}>About</NavLink>
+                        <NavLink to="/projects" className={({ isActive }) =>
+                          `px-3 py-1 rounded transition-colors duration-200 ${isActive ? 'text-accent' : 'hover:bg-slate-700 hover:text-white dark:hover:bg-slate-700 dark:hover:text-white'}`
+                        }>Projects</NavLink>
+                        <NavLink to="/about" className={({ isActive }) =>
+                          `px-3 py-1 rounded transition-colors duration-200 ${isActive ? 'text-accent' : 'hover:bg-slate-700 hover:text-white dark:hover:bg-slate-700 dark:hover:text-white'}`
+                        }>About</NavLink>
                         <button
                             onClick={toggleTheme}
                             aria-label="Toggle theme"
@@ -30,8 +34,8 @@ export default function Navbar() {
 
                 {open && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="md:hidden px-4 pb-4">
-                        <Link to="/projects" onClick={() => setOpen(false)} className="block py-2">Projects</Link>
-                        <Link to="/about" onClick={() => setOpen(false)} className="block py-2">About</Link>
+                        <Link to="/projects" onClick={() => setOpen(false)} className="block py-2 rounded hover:bg-slate-700 hover:text-white dark:hover:bg-slate-700 dark:hover:text-white transition-colors duration-200">Projects</Link>
+                        <Link to="/about" onClick={() => setOpen(false)} className="block py-2 rounded hover:bg-slate-700 hover:text-white dark:hover:bg-slate-700 dark:hover:text-white transition-colors duration-200">About</Link>
                     </motion.div>
                 )}
             </nav>
