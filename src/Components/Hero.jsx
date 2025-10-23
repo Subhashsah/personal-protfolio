@@ -13,7 +13,7 @@ export default function Hero() {
             <a href="#contact" className="px-4 py-2 rounded-xl  border hover:bg-slate-500">Contact</a>
           </div>
         </div>
-        <div className="p-6 bg-card rounded-2xl shadow-lg">
+        <div className="p-6 bg-slate-100 dark:bg-card rounded-2xl shadow-lg">
           <p className="text-3xl font-normal">Featured Stack</p>
           <div className="flex gap-3 mt-4 flex-wrap">
             <span className="px-3 py-1 rounded-md border">React</span>
